@@ -389,7 +389,7 @@ def score_condensed_tree_nodes_bcubed(cluster_elements, label_indices):
 
     for cluster, cluster_labeled_points in cluster_elements.items():
 
-        cluster_labeled_points_dict = {0: 0 for i in range(0)}
+        cluster_labeled_points_dict = {0.0: 0 for i in range(0)}
         bcubed[cluster] = 0.0
 
         if len(cluster_labeled_points) > 0:
