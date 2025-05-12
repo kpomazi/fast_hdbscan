@@ -311,7 +311,7 @@ def get_condensed_tree_clusters_bcubed(condensed_tree, label_indices, cluster_tr
         value_type=int64_list_type,
         )
     
-    virtual_nodes = [0 for x in range(0)] 
+    virtual_nodes = [np.int64(0) for x in range(0)] 
     labeled_points = set(label_indices.keys())
 
     parents_set = set(list(condensed_tree.parent))
