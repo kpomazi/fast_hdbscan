@@ -375,7 +375,7 @@ def eom_recursion_bcubed(node, cluster_tree, stability_node_scores, bcubed_node_
 def score_condensed_tree_nodes_bcubed(cluster_elements, label_indices): 
 
     label_values = label_indices.values()
-    label_counts = {0.0: 0 for i in range(0)}
+    label_counts = {np.int64(0): 0 for i in range(0)}
 
     for label in label_values:
         if label in label_counts:
@@ -385,7 +385,7 @@ def score_condensed_tree_nodes_bcubed(cluster_elements, label_indices):
 
     label_counts_values = list(label_counts.values())
     total_num_of_labeled_points = sum(label_counts_values)
-    bcubed = {0.0: 0.0 for i in range(0)}
+    bcubed = {np.int64(0): 0.0 for i in range(0)}
 
     for cluster, cluster_labeled_points in cluster_elements.items():
 
