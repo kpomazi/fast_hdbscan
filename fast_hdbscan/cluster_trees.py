@@ -385,7 +385,7 @@ def score_condensed_tree_nodes_bcubed(cluster_elements, label_indices):
 
     label_counts_values = list(label_counts.values())
     total_num_of_labeled_points = sum(label_counts_values)
-    bcubed = {0: 0.0 for i in range(0)}
+    bcubed = {0.0: 0.0 for i in range(0)}
 
     for cluster, cluster_labeled_points in cluster_elements.items():
 
