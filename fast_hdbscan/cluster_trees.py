@@ -339,7 +339,11 @@ def get_condensed_tree_clusters_bcubed(condensed_tree, label_indices, cluster_tr
             cluster_elements[node] = List.empty_list(int64)
             cluster_elements[node].append(node)
 
-    return cluster_elements, np.array(virtual_nodes)
+    vn = np.empty(len(virtual_nodes), dtype=virtual_nodes._dtype)
+    for i,v in enumerate(vn):
+        vn[i] = v
+    
+    return cluster_elements, vn
 
 
 @numba.njit()
