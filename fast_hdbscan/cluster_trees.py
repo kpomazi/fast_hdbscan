@@ -303,7 +303,7 @@ def cluster_tree_from_condensed_tree_bcubed(condensed_tree, cluster_tree, label_
                          condensed_tree.child_size[mask])
 
 
-@numba.njit(})
+@numba.njit()
 def get_condensed_tree_clusters_bcubed(condensed_tree, label_indices, cluster_tree=None, cluster_tree_bcubed=None, allow_virtual_nodes=False):
 
     cluster_elements = Dict.empty(
