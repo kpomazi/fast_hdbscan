@@ -303,7 +303,7 @@ def cluster_tree_from_condensed_tree_bcubed(condensed_tree, cluster_tree, label_
                          condensed_tree.child_size[mask])
 
 
-@numba.njit(locals={'virtual_nodes': int64_list_type})
+@numba.njit(})
 def get_condensed_tree_clusters_bcubed(condensed_tree, label_indices, cluster_tree=None, cluster_tree_bcubed=None, allow_virtual_nodes=False):
 
     cluster_elements = Dict.empty(
@@ -311,7 +311,8 @@ def get_condensed_tree_clusters_bcubed(condensed_tree, label_indices, cluster_tr
         value_type=int64_list_type,
         )
     
-    virtual_nodes = [np.int64(0) for x in range(0)] 
+    #virtual_nodes = [np.int64(0) for x in range(0)] 
+    virtual_nodes = List.empty_list(int64)
     labeled_points = set(label_indices.keys())
 
     parents_set = set(list(condensed_tree.parent))
